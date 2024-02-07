@@ -1,0 +1,17 @@
+@import "reset.css";
+@import './styles/container.css';
+@import './styles/header.css';
+@import './styles/button.css';
+@import './styles/hero.css';
+@import './styles/benefits.css';
+@import './styles/swiper.css';
+@import './styles/modal.css';
+
+:root {
+  --c-main: #fff;
+  --c-secondary: #5D78FF;
+  --c-bg: #E2F2FF;
+  --c-bg-card: #F8F8FA;
+  --c-text-main: #001E41;
+  --c-text-secondary: #909090;
+}

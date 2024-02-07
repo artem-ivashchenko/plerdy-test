@@ -1,0 +1,266 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 100;
+
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.modal.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal__content {
+  border-radius: 10px;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: var(--c-main);
+  
+  opacity: 0;
+  transform: translate(-50%, -55%);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.modal__content.show {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+.modal__container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-inline: 24px;
+}
+
+.modal__cross {
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+
+  width: 23px;
+  height: 23px;
+  margin-left: auto;
+  margin-bottom: 10px;
+
+  border-radius: 50%;
+  background-color: #F3F4F6;
+  transition: all 0.3s linear;
+}
+
+.modal__cross:hover {
+  background-color: var(--c-secondary)
+}
+
+.modal__heading {
+  color: var(--c-text-main);
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.modal__text {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.0025em;
+  text-align: center;
+}
+
+.modal__form-name {
+  color: var(--c-text-secondary);
+  font-family: "Roboto", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 12px;
+  letter-spacing: 0.0025em;
+  margin-bottom: 3px;
+}
+
+.modal__form-input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 28px;
+  padding: 6px 9px;
+  border: 0.75px solid #D5D5D6;
+  border-radius: 6px;
+  color: var(--c-text-main);
+
+  font-family: "Roboto",sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.0025em;
+}
+
+.modal__form-input:focus {
+  outline: 1px solid var(--c-text-main);
+}
+
+.modal__form-input--padding {
+  padding-left: 68px;
+}
+
+.modal__form-input::placeholder {
+  color: #BDBDBD;
+}
+
+.modal__form-input-box {
+  position: relative;
+}
+
+.modal__form-image {
+  position: absolute;
+  top: 50%;
+  left: 9px;
+  transform: translateY(-50%);
+}
+
+.modal__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.modal__buttons {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+  padding-block: 8px;
+}
+
+.modal__button {
+  width: 50%;
+}
+
+.modal__policy {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.modal__policy input {
+  cursor: pointer;
+}
+
+.modal__policy-text {
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 11px;
+  color: var(--c-text-secondary);
+}
+
+.modal__policy-text--highlight {
+  color: var(--c-secondary);
+}
+
+.modal__powered-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 4px;
+}
+
+.modal__mini-logo {
+  display: block;
+  width: 22px;
+  height: 15px;
+}
+
+.modal__powered {
+  font-family: "Roboto";
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 11px;
+  color: #BDBDBD;
+}
+
+.modal__powered--underline {
+  text-decoration: underline;
+}
+
+.modal__left {
+  display: none;
+}
+
+.modal__left img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal__right {
+  min-width: 280px;
+  padding: 8px;
+}
+
+.modal__error {
+  color: #c22121;
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@media (min-width: 787px) {
+  .modal__content {
+    min-width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .modal__heading {
+    font-size: 34px;
+    line-height: 41px;
+  }
+
+  .modal__left {
+    display: block;
+  }
+
+  .modal__text {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .modal__form-name {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .modal__form-input {
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 21px;
+    height: 40px;
+  }
+
+  .modal__form-input--padding {
+    padding-left: 68px;
+  }
+
+  .modal__container {
+    gap: 18px;
+  }
+}

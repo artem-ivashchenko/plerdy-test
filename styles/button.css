@@ -1,0 +1,45 @@
+.button {
+  user-select: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  
+  width: fit-content;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  color: var(--c-main);
+  background-color: var(--c-secondary);
+  
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.0025em;
+
+  transition: 0.2s all linear;
+}
+
+.button--header {
+  font-family: 'Source Sans 3', 'Arial', sans-serif;
+  padding: 6px 24px;
+}
+
+.button:hover {
+  border-color: var(--c-text-secondary);
+  background-color: var(--c-bg);
+  color: var(--c-text-secondary);
+}
+
+.button:active {
+  background-color: #AED1FF;
+}
+
+@media (min-width: 787px) {
+  .button {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

@@ -1,0 +1,130 @@
+.hero {
+  margin-bottom: 40px;
+}
+
+.hero__content {
+  padding: 20px 10px ;
+  border-radius: 10px;
+  background-color: var(--c-bg);
+}
+
+.hero__title {
+  color: var(--c-text-main);
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: 0.02em;
+}
+
+.hero__text {
+  color: var(--c-text-main);
+  margin-bottom: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0em;
+}
+
+.hero__text--center {
+  text-align: center;
+}
+
+.hero__text--highlight {
+  margin-bottom: 20px;
+  color:  var(--c-text-secondary);
+}
+
+.hero__button {
+  margin-bottom: 20px;
+}
+
+.hero__companies {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.hero__company {
+  display: block;
+  height: 16px;
+}
+
+.hero__info {
+  margin-bottom: 20px;
+}
+
+.hero__main-img {
+  display: block;
+  object-fit: contain;
+  width: 100%;
+}
+
+.hero__add-img {
+  position: absolute;
+}
+
+@media (min-width: 787px) {
+  .hero {
+    margin-bottom: 100px;
+  }
+
+  .hero__content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 20px 0 30px 50px;
+  }
+  
+  .hero__title {
+    margin-top: 60px;
+    margin-bottom: 16px;
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .hero__main-img {
+    grid-column: span 5;
+    height: 100%;
+  }
+
+  .hero__text {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 6px;
+  }
+
+  .hero__text--highlight {
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 16px;
+  }
+
+  .hero__button {
+    margin-bottom: 20px;
+  }
+
+  .hero__info {
+    grid-column: span 7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  .hero__text--center {
+    text-align: left;
+  }
+
+  .hero__companies {
+    justify-content: flex-start;
+  }
+
+  .hero__company {
+    display: block;
+    height: 20px;
+  }
+}
